@@ -26,27 +26,21 @@ for i in range(48):
     tmp = line.split(',')
     for name in tmp:
         name = name.strip()
-        try:
-            if not os.path.exists(check + '/' + name):
-                os.makedirs(check + '/' + name)
-                driver.get("https://www.google.co.kr/imghp?hl=ko&tab=ri&authuser=0&ogbl")
-                elem = driver.find_element(By.NAME, 'q')
-                elem.send_keys(name)
-                elem.send_keys(Keys.RETURN)
+        
+        driver.get("https://www.google.co.kr/imghp?hl=ko&tab=ri&authuser=0&ogbl")
+        elem = driver.find_element(By.NAME, 'q')
+        elem.send_keys(name)
+        elem.send_keys(Keys.RETURN)
 
-                images = driver.find_elements(By.CSS_SELECTOR, '.rg_i.Q4LuWd')
-                for img in range(20):
-                    try:
-                        images[img].click()
-                        time.sleep(1)
-                        imgURL = driver.find_element(By.CSS_SELECTOR, '.n3VNCb').get_attribute('src')
-                        urllib.request.urlretrieve(imgURL, check + '/' + name + '/' + name + str(img) + '.jpg')
-                    except:
-                        pass
-            else:
-                print(name + ' 이미 있습니다.')
-        except OSError:
-            pass
+        images = driver.find_elements(By.CSS_SELECTOR, '.rg_i.Q4LuWd')
+        for img in range(20):
+            try:
+                images[img].click()
+                time.sleep(1)
+                imgURL = driver.find_element(By.CSS_SELECTOR, '.n3VNCb').get_attribute('src')
+                urllib.request.urlretrieve(imgURL, check + '/' + name + str(img) + '.jpg')
+            except:
+                pass
 driver.close()
 f.close()
 
