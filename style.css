@@ -161,3 +161,357 @@ body {
       font-size: 2rem; 
      }
   }
+
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+
+.animal-label {
+  width: 20%;
+  text-align: left;
+  height: 2rem;
+}
+
+.align-items-center {
+  -ms-flex-align: center!important;
+  align-items: center!important;
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+
+.position-relative {
+  position: relative!important;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.justify-content-center {
+  -ms-flex-pack: center!important;
+  justify-content: center!important;
+}
+
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.ENFJ-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ENFJ-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ENFP-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ENFP-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ENTJ-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ENTJ-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ENTP-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ENTP-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ESFJ-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ESFJ-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ESFP-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ESFP-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ESTJ-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ESTJ-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ESTP-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ESTP-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.INFJ-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.INFJ-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.INFP-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.INFP-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.INTJ-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.INTJ-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.INTP-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.INTP-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ISFJ-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ISFJ-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ISFP-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ISFP-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ISTJ-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ISTJ-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.ISTP-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ISTP-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: spinner-border .75s linear infinite;
+  animation: spinner-border .75s linear infinite;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
