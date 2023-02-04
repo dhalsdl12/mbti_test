@@ -18,8 +18,10 @@ for i in range(48):
         try:
             if not os.path.exists(check):
                 os.makedirs(check)
+            else:
+                print(check + '이미 존재합니다.')
         except OSError:
-            print(check + ' 이미 있습니다.')
+            pass
         continue
     tmp = line.split(',')
     for name in tmp:
@@ -38,12 +40,13 @@ for i in range(48):
                         images[img].click()
                         time.sleep(1)
                         imgURL = driver.find_element(By.CSS_SELECTOR, '.n3VNCb').get_attribute('src')
-                        urllib.request.urlretrieve(imgURL, check + '/' + name + '/' + str(img) + '.jpg')
+                        urllib.request.urlretrieve(imgURL, check + '/' + name + '/' + name + str(img) + '.jpg')
                     except:
                         pass
+            else:
+                print(name + ' 이미 있습니다.')
         except OSError:
-            print(name + ' 이미 있습니다.')
-
+            pass
 driver.close()
 f.close()
 
