@@ -1,4 +1,4 @@
-User-Agent:*
-Allow: /
+User-agent: *
+Allow:/
 
-Sitemap: https://ai-mbti.netlify.app//sitemap.xml
+Sitemap: https://ai-mbti.netlify.app/sitemap.xml
