@@ -86,10 +86,10 @@ body {
   
   /* PREVIEW */
   .file-upload-image {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 60%;
+    max-width: 60%;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
   }
   /* REMOVE */
   .file-upload-remove {
