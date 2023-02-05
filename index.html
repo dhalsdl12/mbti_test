@@ -76,13 +76,20 @@
 
         <div class="file-upload-preview">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            
+            <div id="loading" classs="animated bounce" style="display: none">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <p class="text-center">AI가 당신의 사진을 분석중입니다.</p>
+            </div>
+            
             <p class="result-message"></p>
             <!-- <div id="label-container"></div> -->
             <div id="label-container"></div>
             
             <div class="file-upload-remove">
-                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span
-                        class="image-title">Uploaded Image</span></button>
+                <button type="button" onclick="removeUpload()" class="remove-image">다른 사진으로 재시도</button>
             </div>
         </div>
 
@@ -126,7 +133,8 @@
                 var reader = new FileReader();                          // FileReader() : init
                 reader.onload = function (e) {                           /* FileReader : set up ************** */
                     console.log('e', e)
-                    $('.file-upload-placeholder').hide();                 // call for action element : hide
+                    $('.file-upload-placeholder').hide();               // call for action element : hide
+                    $('#loading').show();
                     $('.file-upload-image').attr('src', e.target.result); // image element : set src data.
                     $('.file-upload-preview').show();                     // image element's container : show
                     $('.image-title').html(inputFileData.name);           // set image's title
@@ -136,6 +144,7 @@
                 init().then(()=>{
                     console.log('finish init loding');
                     predict();
+                    $('#loading').hide();
                 });
             } else { removeUpload(); }
         }
