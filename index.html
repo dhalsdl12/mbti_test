@@ -9,6 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63df2c5fb3844370"></script>
+
 </head>
 
 
@@ -58,8 +62,22 @@
         </div>
     </nav>
     <section class="section">
-        <h1 class="title">인공지능 MBTI 테스트(남자)</h1>
+        <h1 class="title">인공지능 MBTI 테스트</h1>
         <h2 class="subtitle">나는 어떤 MBTI일까?</h2>
+    </section>
+
+    <h3 class="pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여자</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <!-- <i></i> -->
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남자</p>
     </section>
 
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -87,6 +105,9 @@
             <p class="result-message"></p>
             <!-- <div id="label-container"></div> -->
             <div id="label-container"></div>
+            
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_share_toolbox"></div>
             
             <div class="file-upload-remove">
                 <button type="button" onclick="removeUpload()" class="remove-image">다른 사진으로 재시도</button>
@@ -132,17 +153,14 @@
                 var inputFileData = input.files[0];                     // shortcut
                 var reader = new FileReader();                          // FileReader() : init
                 reader.onload = function (e) {                           /* FileReader : set up ************** */
-                    console.log('e', e)
                     $('.file-upload-placeholder').hide();               // call for action element : hide
                     $('#loading').show();
                     $('.file-upload-image').attr('src', e.target.result); // image element : set src data.
                     $('.file-upload-preview').show();                     // image element's container : show
                     $('.image-title').html(inputFileData.name);           // set image's title
                 };
-                console.log('input.files[0]', input.files[0])
                 reader.readAsDataURL(inputFileData);     // reads target inputFileData, launch `.onload` actions
                 init().then(()=>{
-                    console.log('finish init loding');
                     predict();
                     $('#loading').hide();
                 });
@@ -150,13 +168,12 @@
         }
 
         function removeUpload() {
-            var $clone = $('.file-upload-input').val('').clone(true); // create empty clone
-            $('.file-upload-input').replaceWith($clone);              // reset input: replaced by empty clone
-            $('.file-upload-placeholder').show();                     // show placeholder
-            $('.file-upload-preview').hide();                         // hide preview
+            var $clone = $('.file-upload-input').val('').clone(true);
+            $('.file-upload-input').replaceWith($clone); 
+            $('.file-upload-placeholder').show();
+            $('.file-upload-preview').hide(); 
         }
 
-        // Style when drag-over
         $('.file-upload-placeholder').bind('dragover', function () {
             $('.file-upload-placeholder').addClass('image-dropping');
         });
@@ -167,34 +184,31 @@
     <script type="text/javascript">
         // More API functions here:
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
-
-        // the link to your model provided by Teachable Machine export panel
-        const URL = "https://teachablemachine.withgoogle.com/models/RZio_p4Uq/";
-
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/RZio_p4Uq/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/RZio_p4Uq/";
         let model, webcam, labelContainer, maxPredictions;
 
-        // Load the image model and setup the webcam
         async function init() {
+            if(document.getElementById("gender").checked){
+                URL = urlMale;
+            }
+            else{
+                URL = urlFemale;
+            }
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
 
-            // load the model and metadata
-            // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-            // or files from your local hard drive
-            // Note: the pose library adds "tmImage" object to your window (window.tmImage)
             model = await tmImage.load(modelURL, metadataURL);
             maxPredictions = model.getTotalClasses();
-
-            // append elements to the DOM
             labelContainer = document.getElementById("label-container");
-            for (let i = 0; i < maxPredictions; i++) { // and class labels
+            for (let i = 0; i < maxPredictions; i++) {
                 var element = document.createElement("div")
                 element.classList.add("d-flex");
                 labelContainer.appendChild(element);
             }
         }
 
-        // run the webcam image through the image model
         async function predict() {
             // predict can take in an image, video or canvas html element
             var image = document.getElementById("face-image")
