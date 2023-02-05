@@ -171,6 +171,11 @@ body {
   text-align: left;
   height: 2rem;
 }
+.mbti-label {
+  width: 20%;
+  text-align: left;
+  height: 2rem;
+}
 
 .align-items-center {
   -ms-flex-align: center!important;
@@ -192,10 +197,22 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-
+#label-container {
+  width: 80%;
+  margin: 0 auto;
+}
 .justify-content-center {
   -ms-flex-pack: center!important;
   justify-content: center!important;
+}
+
+.justify-content-around {
+  -ms-flex-pack: distribute!important;
+  justify-content: space-around!important;
+}
+.flex-column{
+  -ms-flex-direction: column!important;
+  flex-direction: column!important;
 }
 
 .percent-text {
